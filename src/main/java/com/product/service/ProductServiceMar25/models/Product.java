@@ -1,5 +1,6 @@
 package com.product.service.ProductServiceMar25.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 import lombok.Getter;
@@ -9,6 +10,7 @@ import lombok.Setter;
 @Setter
 @Entity(name = "products")
 public class Product extends BaseModel{
+    @Column(unique = true, nullable = false)
     private String title;
     private Double price;
     @ManyToOne

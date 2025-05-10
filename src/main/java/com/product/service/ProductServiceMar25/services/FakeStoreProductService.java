@@ -3,13 +3,15 @@ package com.product.service.ProductServiceMar25.services;
 import com.product.service.ProductServiceMar25.dtos.FakeStoreProductDto;
 import com.product.service.ProductServiceMar25.models.Category;
 import com.product.service.ProductServiceMar25.models.Product;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
+@Service("FakeStoreProductService")
+//@Primary
 public class FakeStoreProductService implements ProductService{
     //RestTemplate
     private RestTemplate restTemplate;
